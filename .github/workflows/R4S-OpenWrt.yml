@@ -1,8 +1,8 @@
-name: R4S-OpenWrt
+name: R2S-R4S-X86-OpenWrt
 
 on:
-#  schedule:
-#    - cron: 5 6 * * 0
+  schedule:
+    - cron: 5 6 * * 0
   watch:
     types: started
 
@@ -59,10 +59,10 @@ jobs:
         cp -r ../SCRIPTS/. ./
         /bin/bash 02_prepare_package.sh
         /bin/bash 02_target_only.sh
-    - name: Convert Translation
-      run: |
-        cd openwrt
-        /bin/bash 03_convert_translation.sh
+   # - name: Convert Translation
+    #  run: |
+     #   cd openwrt
+     #   /bin/bash 03_convert_translation.sh
     - name: Add ACL
       run: |
         cd openwrt

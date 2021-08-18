@@ -383,6 +383,8 @@ wget -P package/base-files/files/usr/bin/ https://github.com/QiuSimons/OpenWrt-A
 #wget -P package/base-files/files/usr/bin/ https://github.com/QiuSimons/OpenWrt-Add/raw/master/setdns
 # 最大连接数
 sed -i 's/16384/65535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
+# Modify default IP
+sed -i 's/192.168.1.1/10.0.10.100/g' package/base-files/files/bin/config_generate
 # 生成默认配置及缓存
 rm -rf .config
 
