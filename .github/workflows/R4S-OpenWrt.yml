@@ -5,20 +5,11 @@ on:
   # - cron: 5 6 * * 0
   #watch:
   # types: started
-  #   repository_dispatch:
-  #   workflow_dispatch:
+     repository_dispatch:
+     workflow_dispatch:
  
 env:
-  #REPO_URL: https://github.com/coolsnowwolf/lede
-  #REPO_BRANCH: master
-  #CONFIG_FILE: configs/lean/lean.config
-  #DIY_SH: scripts/lean.sh
-  #IPV6MOD_IN_FIRMWARE: true
-  #KMODS_IN_FIRMWARE: true
-  #UPLOAD_WETRANSFER: false
-  #UPLOAD_COWTRANSFER: false
-  #UPLOAD_RELEASE: true
-  #TZ: Europe/Kiev
+  TZ: Europe/Kiev
 
 jobs:
   build:
